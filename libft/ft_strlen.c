@@ -1,18 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: teecharo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/27 11:23:38 by teecharo          #+#    #+#             */
-/*   Updated: 2023/02/27 13:13:39 by teecharo         ###   ########.fr       */
+/*   Created: 2023/02/27 11:05:49 by teecharo          #+#    #+#             */
+/*   Updated: 2023/02/27 11:12:56 by teecharo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include"libft.h"
 
-int	ft_isalnum(int c)
+size_t	ft_strlen(const char *c)
 {
-	return (ft_isalpha(c) || ft_isdigit(c));
+	size_t	count;
+
+	count = 0;
+	while (c[count])
+		count++;
+	return (count);
 }
+/*
+#include<stdio.h>
+
+int main(){
+	printf("%zu",ft_strlen("asdf"));
+}
+*/

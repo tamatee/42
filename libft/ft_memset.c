@@ -1,18 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: teecharo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/27 11:23:38 by teecharo          #+#    #+#             */
-/*   Updated: 2023/02/27 13:13:39 by teecharo         ###   ########.fr       */
+/*   Created: 2023/02/27 12:29:04 by teecharo          #+#    #+#             */
+/*   Updated: 2023/02/27 12:41:29 by teecharo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isalnum(int c)
+void	*ft_memset(void *b, int c, size_t len)
 {
-	return (ft_isalpha(c) || ft_isdigit(c));
+	unsigned char	*a;
+
+	a = (unsigned char *)b;
+	while (len--)
+		a[len] = c;
+	return (b);
 }
