@@ -6,7 +6,7 @@
 /*   By: teecharo <teecharo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/21 09:00:34 by teecharo          #+#    #+#             */
-/*   Updated: 2023/03/15 12:37:30 by teecharo         ###   ########.fr       */
+/*   Updated: 2023/03/15 13:38:52 by teecharo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,8 @@ typedef struct	s_split_next
 }				t_split_next;
 
 int	ft_isalpha(int c);
+
+int	ft_atoi(const char *str);
 
 int	ft_isdigit(int c);
 

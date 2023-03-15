@@ -6,7 +6,7 @@
 /*   By: teecharo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/13 14:04:42 by teecharo          #+#    #+#             */
-/*   Updated: 2023/03/13 15:03:07 by teecharo         ###   ########.fr       */
+/*   Updated: 2023/03/15 13:17:16 by teecharo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,8 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	{
 		if (*str1 != *str2)
 			return (*str1 - *str2);
-		*str1 += 1;
-		*str2 += 1;
+		str1++;
+		str2++;
 	}
 	return (0);
 }
