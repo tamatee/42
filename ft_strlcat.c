@@ -6,7 +6,7 @@
 /*   By: teecharo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/13 15:49:05 by teecharo          #+#    #+#             */
-/*   Updated: 2023/03/15 12:19:30 by teecharo         ###   ########.fr       */
+/*   Updated: 2023/03/22 15:44:11 by teecharo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,14 +25,14 @@ size_t	ft_strlcat(char *restrict dst, const char *restrict src, size_t dstsize)
 	while (cnt-- > 0 && *dst)
 		dst++;
 	len = dst - d;
-	cnt = dstsize;
+	cnt = dstsize - len;
 	if (cnt-- == 0)
-		return (len + ft_strlen(s));
+		return (len + ft_strlen(src));
 	while (*src)
 	{
 		if (cnt > 0)
 		{
-			*dst++ = *src++;
+			*dst++ = *src;
 			cnt--;
 		}
 		src++;

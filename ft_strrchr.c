@@ -6,7 +6,7 @@
 /*   By: teecharo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/13 15:07:32 by teecharo          #+#    #+#             */
-/*   Updated: 2023/03/22 13:34:17 by teecharo         ###   ########.fr       */
+/*   Updated: 2023/03/22 15:50:48 by teecharo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,14 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	char	*ptr;
 	unsigned int	len;
-	char	chr;
+	char			chr;
+	char			*ptr;
 
 	ptr = (char *)s;
 	chr = (char)c;
 	len = ft_strlen(s);
-	if(c == 0)
+	if (c == 0)
 	{
 		return ((char *)ptr + len);
 	}

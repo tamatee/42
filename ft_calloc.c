@@ -1,36 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: teecharo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/15 13:39:49 by teecharo          #+#    #+#             */
-/*   Updated: 2023/03/22 15:48:54 by teecharo         ###   ########.fr       */
+/*   Created: 2023/03/22 15:27:37 by teecharo          #+#    #+#             */
+/*   Updated: 2023/03/22 16:00:45 by teecharo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"libft.h"
 
-int	ft_atoi(const char *str)
+void	*ft_calloc(size_t count, size_t size)
 {
-	unsigned int	num;
-	int				i;
-	int				np;
+	char	*a;
 
-	np = 1;
-	i = 0;
-	num = 0;
-	while (str[i] == ' ' || str[i] == '\t' || str[i] == '\f'
-		|| str[i] == '\r' || str[i] == '\n' || str[i] == '\v')
-		i++;
-	if (str[i] == '+' || str[i] == '-')
-		if (str[i++] == '-')
-			np = -1;
-	while (str[i] >= '0' && str[i] <= '9')
-	{
-		num = num * 10 + (str[i] - '0');
-		i++;
-	}
-	return ((int)(np * num));
+	a = malloc(count * size);
+	if (count >= SIZE_MAX && size >= SIZE_MAX)
+		return (NULL);
+	if (!a)
+		return (NULL);
+	ft_bzero(a, count * size);
+	return (a);
 }

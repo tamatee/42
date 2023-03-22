@@ -6,7 +6,7 @@
 /*   By: teecharo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/15 12:19:49 by teecharo          #+#    #+#             */
-/*   Updated: 2023/03/15 12:50:25 by teecharo         ###   ########.fr       */
+/*   Updated: 2023/03/22 15:33:20 by teecharo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
 	char	*hay;
 	char	*ne;
-	size_t	hay_len;
+	size_t	ne_len;
 
 	hay = (char *)haystack;
 	ne = (char *)needle;
@@ -24,13 +24,13 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 		return (NULL);
 	if (ft_memcmp(ne, (char *)"", 1) == 0)
 		return (hay);
-	hay_len = ft_strlen(hay);
+	ne_len = ft_strlen(ne);
 	if (ft_memcmp(hay, (char *)"", 1))
 	{
-		while (len-- && *hay)
+		while (len-- > 0 && *hay)
 		{
-			if (*hay == *ne && len >= hay_len - 1)
-				if (ft_strncmp(hay, ne, hay_len) == 0)
+			if (*hay == *ne && len >= ne_len - 1)
+				if (ft_strncmp(hay, ne, ne_len) == 0)
 					return (hay);
 			hay++;
 		}
