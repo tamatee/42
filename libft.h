@@ -6,7 +6,7 @@
 /*   By: teecharo <teecharo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/21 09:00:34 by teecharo          #+#    #+#             */
-/*   Updated: 2023/03/22 16:00:26 by teecharo         ###   ########.fr       */
+/*   Updated: 2023/03/24 12:25:42 by teecharo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,5 +73,7 @@ void	ft_bzero(void *s, size_t n);
 void	*ft_calloc(size_t count, size_t size);
 
 char	*ft_strdup(const char *s1);
+
+char	*ft_substr(char const *s, unsigned int start,size_t len);
 
 #endif
