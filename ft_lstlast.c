@@ -6,7 +6,7 @@
 /*   By: teecharo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/29 13:26:13 by teecharo          #+#    #+#             */
-/*   Updated: 2023/03/29 14:34:28 by teecharo         ###   ########.fr       */
+/*   Updated: 2023/03/29 15:41:31 by teecharo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 t_list	*ft_lstlast(t_list *lst)
 {
-	t_list *node;
+	t_list	*node;
 
 	if (!lst)
 		return (NULL);
