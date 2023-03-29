@@ -6,7 +6,7 @@
 /*   By: teecharo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/22 15:52:35 by teecharo          #+#    #+#             */
-/*   Updated: 2023/03/24 14:28:02 by teecharo         ###   ########.fr       */
+/*   Updated: 2023/03/29 13:04:24 by teecharo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_strdup(const char *s1)
 {
-	int	len;
+	int		len;
 	char	*s;
 
 	len = ft_strlen(s1) + 1;

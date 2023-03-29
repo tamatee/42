@@ -1,18 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
+/*   ft_lstiter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jchawsar <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: teecharo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/19 23:54:01 by jchawsar          #+#    #+#             */
-/*   Updated: 2022/09/20 20:54:59 by jchawsar         ###   ########.fr       */
+/*   Created: 2023/03/29 14:09:33 by teecharo          #+#    #+#             */
+/*   Updated: 2023/03/29 14:10:50 by teecharo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include"libft.h"
 
-void	ft_putchar_fd(char c, int fd)
+void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	write(fd, &c, 1);
+	t_list	*node;
+
+	if (!lst || !f)
+		return ;
+	node = lst;
+	while (node != NULL)
+	{
+		(f)(node -> content);
+		node = node -> next;
+	}
 }

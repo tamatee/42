@@ -6,7 +6,7 @@
 /*   By: teecharo <teecharo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/24 12:18:34 by teecharo          #+#    #+#             */
-/*   Updated: 2023/03/24 14:33:13 by teecharo         ###   ########.fr       */
+/*   Updated: 2023/03/29 13:08:36 by teecharo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,11 @@
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*res;
-	size_t		tmp_I;
-	size_t		l;
+	size_t	l;
+	size_t	ti;
 
 	l = len;
-	if(!s)
+	if (!s)
 		return (NULL);
 	if (start > ft_strlen(s))
 		l = 0;
@@ -28,11 +28,11 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	res = (char *)ft_calloc(1, l + 1);
 	if (!res)
 		return (NULL);
-	tmp_I = (int)start;
-	while (tmp_I < ft_strlen(s) && (tmp_I - start) < l)
+	ti = (int)start;
+	while (ti < ft_strlen(s) && (ti - start) < l)
 	{
-		res[tmp_I - start] = s[tmp_I];
-		tmp_I++;
+		res[ti - start] = s[ti];
+		ti++;
 	}
 	return (res);
 }

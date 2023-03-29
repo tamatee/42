@@ -1,18 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isprint.c                                       :+:      :+:    :+:   */
+/*   ft_lstlast.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jchawsar <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: teecharo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/30 10:25:01 by jchawsar          #+#    #+#             */
-/*   Updated: 2022/10/14 14:55:25 by jchawsar         ###   ########.fr       */
+/*   Created: 2023/03/29 13:26:13 by teecharo          #+#    #+#             */
+/*   Updated: 2023/03/29 14:34:28 by teecharo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isprint(int c)
+#include"libft.h"
+
+t_list	*ft_lstlast(t_list *lst)
 {
-	if (c >= 32 && c <= 126)
-		return (1);
-	return (0);
+	t_list *node;
+
+	if (!lst)
+		return (NULL);
+	node = lst;
+	while (node -> next != NULL)
+		node = node -> next;
+	return (node);
 }

@@ -6,7 +6,7 @@
 /*   By: teecharo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/28 12:16:21 by teecharo          #+#    #+#             */
-/*   Updated: 2023/03/28 12:27:52 by teecharo         ###   ########.fr       */
+/*   Updated: 2023/03/29 13:04:15 by teecharo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ static	size_t	cnt_digit(long long n)
 
 char	*ft_itoa(int n)
 {
-	char	*res;
+	char		*res;
 	size_t		digit;
 	long long	nbr;
 
@@ -53,7 +53,7 @@ char	*ft_itoa(int n)
 		res[0] = '0';
 	while (nbr > 0)
 	{
-		res[digit--] = (nbr % 10)+ '0';
+		res[digit--] = (nbr % 10) + '0';
 		nbr = nbr / 10;
 	}
 	return (res);
