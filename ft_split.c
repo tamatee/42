@@ -6,7 +6,7 @@
 /*   By: teecharo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/29 14:44:29 by teecharo          #+#    #+#             */
-/*   Updated: 2023/03/29 15:40:02 by teecharo         ###   ########.fr       */
+/*   Updated: 2023/04/12 16:17:10 by teecharo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,8 +63,7 @@ char	**ft_split(char const *s, char c)
 			while (*s && *s != c)
 				s++;
 			res[ti] = ft_substr(src, 0, (s - src));
-			if (!res[ti++])
-				return (ft_free_in(res, ti));
+			ti++;
 		}
 		else
 			s++;

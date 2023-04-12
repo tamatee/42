@@ -6,7 +6,7 @@
 /*   By: teecharo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/27 11:13:45 by teecharo          #+#    #+#             */
-/*   Updated: 2023/02/27 11:19:45 by teecharo         ###   ########.fr       */
+/*   Updated: 2023/04/12 16:01:38 by teecharo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,3 @@ int	ft_toupper(int c)
 		c -= 32;
 	return (c);
 }
-/*
-#include<stdio.h>
-int main() {
-	printf("%c",ft_toupper('a'));
-}
-*/

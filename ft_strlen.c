@@ -6,7 +6,7 @@
 /*   By: teecharo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/27 11:05:49 by teecharo          #+#    #+#             */
-/*   Updated: 2023/02/27 11:12:56 by teecharo         ###   ########.fr       */
+/*   Updated: 2023/04/12 16:01:01 by teecharo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,3 @@ size_t	ft_strlen(const char *c)
 		count++;
 	return (count);
 }
-/*
-#include<stdio.h>
-
-int main(){
-	printf("%zu",ft_strlen("asdf"));
-}
-*/

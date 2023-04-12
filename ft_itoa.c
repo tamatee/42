@@ -6,13 +6,13 @@
 /*   By: teecharo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/28 12:16:21 by teecharo          #+#    #+#             */
-/*   Updated: 2023/03/29 13:04:15 by teecharo         ###   ########.fr       */
+/*   Updated: 2023/04/12 16:17:23 by teecharo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"libft.h"
 
-static	size_t	cnt_digit(long long n)
+static size_t	cnt_digit(long long n)
 {
 	size_t	digit;
 
